@@ -1,103 +1,94 @@
 import Image from "next/image";
+import Link from "next/link";
+import cloud from "../../public/images/cloud.png";
+import blockBrick from "../../public/images/blockBrick.png";
+import blockQuestion from "../../public/images/blockQuestion.png";
+import goomba from "../../public/images/goomba.webp";
+import bush from "../../public/images/bush.png";
+import mountain from "../../public/images/mountain.png";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div>
+      <section className="w-full h-dvh bg-[#A2ADFF] relative">
+        <div className="flex flex-col items-center h-full">
+          <div className="bg-[#DE5819] mt-10 w-fill h-1/3 p-6 rounded-sm border-4 border-t-white border-l-white flex items-center justify-center relative">
+            <div className="flex justify-center items-start flex-col">
+              <h1 className="font-shadow text-[3.5rem] text-[#FDDFC9] leading-none text-shadow-lg text-shadow-black pb-6 font-bold m-0">MYPORT</h1>
+              <h1 className="font-shadow text-[6rem] text-[#FDDFC9] leading-none font-bold m-0 w-fit">FOLIO</h1>
+            </div>
+            <div className="dot-shadow w-2 h-2 bg-white absolute top-2 left-2"></div>
+            <div className="dot-shadow w-2 h-2 bg-white absolute top-2 right-2"></div>
+            <div className="dot-shadow w-2 h-2 bg-white absolute bottom-2 left-2"></div>
+            <div className="dot-shadow w-2 h-2 bg-white absolute bottom-2 right-2"></div>
+          </div>
+          <Image src={cloud} className="w-40 object-cover absolute top-[5rem] left-[5rem]"/>
+          <Image src={cloud} className="w-40 object-cover absolute top-[22rem] left-[8rem]"/>
+          <Image src={cloud} className="w-40 object-cover absolute top-[5rem] right-[5rem]"/>
+          <Image src={cloud} className="w-40 object-cover absolute top-[18rem] right-[17rem]"/>
+          <Image src={blockBrick} className="w-20 object-cover absolute top-[23rem] right-0"/>
+          <Image src={blockBrick} className="w-20 object-cover absolute top-[23rem] right-[10rem]"/>
+          <Image src={blockQuestion} className="nes-pointer w-20 object-cover absolute top-[23rem] right-[5rem]"/>
+          <Image src={blockQuestion} className="nes-pointer w-20 object-cover absolute top-[10rem] right-4"/>
+          <Link href="#about">
+            <Image src={blockQuestion} className="nes-pointer w-20 object-cover absolute top-[23rem] left-[38rem] hover:-translate-y-4 transition-all duration-300 ease-in-out"/>
+          </Link>
+          <div className="group/item">
+            <div className="hidden group-hover/item:block absolute right-[14rem] bottom-[12rem] z-10">
+              <section className="message -left">
+                <div class="nes-balloon from-right">
+                  <p>I'm a Front-end Developer.</p>
+                </div>
+              </section>
+            </div>
+            <Image src={goomba} className="w-20 object-cover absolute bottom-24 right-[10rem] hover:animate-bounce nes-pointer"/>
+          </div>
+          <div className="group/item">
+            <div className="hidden group-hover/item:block">
+              <section className="message -left absolute left-[24rem] bottom-[13rem]">
+                <div class="nes-balloon from-left">
+                  <p>Hi i'm Mon</p>
+                </div>
+              </section>
+            </div>
+            <div className="absolute bottom-23 left-[20rem]">
+              <i className="nes-mario hover:animate-bounce nes-pointer"></i>
+            </div>
+          </div>
+          <Image src={bush} className="w-[20rem] object-cover absolute bottom-24 left-[30rem]"/>
+          <Image src={mountain} className="w-[18rem] object-cover absolute bottom-24 left-[52rem]"/>
+          <div class="brick w-full h-24 bg-white absolute bottom-0"></div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      <div className="container mx-auto p-10 flex flex-col gap-22" id="about">
+        <div className="flex gap-2">
+          <a className="nes-btn" href="#">Normal</a>
+          <button type="button" className="nes-btn is-primary">Primary</button>
+          <button type="button" className="nes-btn is-success">Success</button>
+          <button type="button" className="nes-btn is-warning">Warning</button>
+          <button type="button" className="nes-btn is-error">Error</button>
+          <button type="button" className="nes-btn is-disabled">Disabled</button>
+          <label className="nes-btn">
+            <span>Select your file</span>
+          </label>
+        </div>
+
+        <div class="nes-container with-title is-centered">
+          <p class="title">Container.is-centered</p>
+          <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
+        </div>
+        <div class="nes-container with-title">
+          <p class="title">Container.is-dark</p>
+          <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
+        </div>
+        <div class="nes-container is-rounded">
+          <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
+        </div>
+        <div class="nes-container is-rounded is-dark">
+          <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
+        </div>
+      </div>
     </div>
   );
 }
