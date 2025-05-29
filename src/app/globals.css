@@ -16,6 +16,10 @@ html {
   scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 .brick {
   background-image: url("../../public/images/brickWall.webp");
   background-size: 50%;
