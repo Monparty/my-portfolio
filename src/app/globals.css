@@ -34,3 +34,11 @@ a {
   text-shadow: 0 8px #000000;
   box-shadow: 3px 3px #000000;
 }
+
+.box-project::-webkit-scrollbar {
+  display: none;
+}
+
+button:hover {
+  scale: 106%;
+}
